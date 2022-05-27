@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IProduct } from "../../types/redux.types";
 
 const initialState: IProduct[] = [
   {
@@ -35,6 +36,27 @@ const initialState: IProduct[] = [
     inStock: true,
     title: "Game of Thrones",
     category: "books",
+  },
+  {
+    id: 6,
+    price: 2800,
+    inStock: true,
+    title: "Macbook",
+    category: "electronics",
+  },
+  {
+    id: 7,
+    price: 1800,
+    inStock: true,
+    title: "Ipad",
+    category: "electronics",
+  },
+  {
+    id: 8,
+    price: 4800,
+    inStock: true,
+    title: "TV 4K",
+    category: "electronics",
   },
 ];
 

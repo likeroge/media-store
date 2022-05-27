@@ -2,6 +2,7 @@ import { Box, Center, useToast } from "@chakra-ui/react";
 import React, { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/redux.hooks";
 import { addToCart } from "../store/slices/cartSlice";
+import { IProduct } from "../types/redux.types";
 
 export const Product: FC<IProduct> = (product) => {
   const cart = useAppSelector((state) => state.cart);

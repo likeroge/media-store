@@ -1,7 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ICart, IProduct } from "../../types/redux.types";
 
 const initialState: ICart = {
-  products: [],
+  products: [
+    {
+      id: 5,
+      price: 800,
+      inStock: true,
+      title: "Game of Thrones",
+      category: "books",
+    },
+  ],
   totalPrice: 0,
 };
 
@@ -22,16 +31,18 @@ export const cartSlice = createSlice({
         (el) => productIndexToRemove !== prevList.indexOf(el)
       );
 
-      // let updatedProductsList = state.products.filter(
-      //   (el) => state.products.indexOf(el) !== productIndexToRemove
-      // );
       console.log(updatedProductsList);
       state.products = updatedProductsList;
       state.totalPrice -= action.payload.price;
     },
+
+    removeAllItemsFromCart(state) {
+      state.products = [];
+    },
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, removeAllItemsFromCart } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

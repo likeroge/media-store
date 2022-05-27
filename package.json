@@ -17,6 +17,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
     "@types/webpack": "^5.28.0",
+    "file-loader": "^6.2.0",
     "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.3.0",

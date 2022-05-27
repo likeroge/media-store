@@ -2,6 +2,7 @@ import { Box, Center, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/redux.hooks";
 import { addToCart } from "../store/slices/cartSlice";
+import { IProduct } from "../types/redux.types";
 import { Product } from "./Product";
 
 export const ProductsList = () => {

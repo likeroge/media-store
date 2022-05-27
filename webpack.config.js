@@ -8,7 +8,17 @@ module.exports = {
       : "hidden-source-map",
   entry: "./src/index.tsx",
   module: {
-    rules: [{ test: /\.tsx?$/, loader: "ts-loader", exclude: /node_modules/ }],
+    rules: [
+      { test: /\.tsx?$/, loader: "ts-loader", exclude: /node_modules/ },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
