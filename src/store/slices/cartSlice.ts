@@ -3,13 +3,13 @@ import { ICart, IProduct } from "../../types/redux.types";
 
 const initialState: ICart = {
   products: [
-    {
-      id: 5,
-      price: 800,
-      inStock: true,
-      title: "Game of Thrones",
-      category: "books",
-    },
+    // {
+    //   id: 5,
+    //   price: 800,
+    //   inStock: true,
+    //   title: "Game of Thrones",
+    //   category: "books",
+    // },
   ],
   totalPrice: 0,
 };

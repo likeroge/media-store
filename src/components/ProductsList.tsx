@@ -11,14 +11,14 @@ export const ProductsList = () => {
   let name = { name: "Egor" };
   return (
     <SimpleGrid
-      columns={{ base: 2, sm: 3, lg: 4, xl: 5 }}
+      columns={{ base: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
       spacing={10}
       pb={20}
       // w="100%"
       // h={"100%"}
     >
       {products.map((product: IProduct) => (
-        <Product {...product} />
+        <Product {...product} key={product.id} />
       ))}
     </SimpleGrid>
   );

@@ -24,6 +24,7 @@ export const CartItem: FC<IProduct> = (product, idx: number) => {
           borderRadius={30}
           h={5}
           onClick={() => dispatch(addToCart({ ...product }))}
+          mr={"3px"}
         >
           +
         </Button>
@@ -34,6 +35,7 @@ export const CartItem: FC<IProduct> = (product, idx: number) => {
           variant={"outline"}
           borderRadius={30}
           h={5}
+          ml={"3px"}
         >
           -
         </Button>

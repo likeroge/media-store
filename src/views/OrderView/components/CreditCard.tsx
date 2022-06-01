@@ -32,11 +32,14 @@ export const CreditCard: FC<ICardData> = ({
         textColor="white"
       >
         <HStack justifyContent={"space-between"}>
-          <Text>CHIP</Text>
-          <Text>SYSTEM</Text>
+          <Text></Text>
+          <Text fontWeight={"bold"}>CARD</Text>
         </HStack>
         <HStack justifyContent={"center"}>
-          <Text>{cardNum}</Text>
+          <Text>{cardNum.slice(0, 4)}</Text>
+          <Text>{cardNum.slice(4, 8)}</Text>
+          <Text>{cardNum.slice(8, 12)}</Text>
+          <Text>{cardNum.slice(12, 16)}</Text>
         </HStack>
         <HStack justifyContent={"space-between"}>
           <Text>{fullName}</Text>

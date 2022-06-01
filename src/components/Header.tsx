@@ -20,7 +20,6 @@ import { useAppSelector } from "../hooks/redux.hooks";
 export const Header = () => {
   const navigate = useNavigate();
   const cart = useAppSelector((state) => state.cart);
-  console.log(cart);
 
   return (
     <HStack
@@ -30,6 +29,7 @@ export const Header = () => {
       position={"fixed"}
       w="100vw"
       justifyContent={"space-between"}
+      zIndex={100}
     >
       <Box onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
         <Center>
@@ -42,7 +42,8 @@ export const Header = () => {
           </Text>
         </Center>
       </Box>
-      <Box>
+
+      <Box display={{ base: "none", lg: "block" }}>
         <Link as={ReactRouterLink} to="cart">
           {cart.products.length === 0 ? (
             <Icon color={"gray.400"} as={BsCart} w={7} h={7} />
@@ -50,7 +51,6 @@ export const Header = () => {
             <Center>
               <Tag
                 size={"15"}
-                // key={"10"}
                 borderRadius="full"
                 variant="subtle"
                 colorScheme="gray"

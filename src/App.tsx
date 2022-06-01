@@ -18,6 +18,7 @@ import { useAppDispatch, useAppSelector } from "./hooks/redux.hooks";
 import { addToCart } from "./store/slices/cartSlice";
 import { OrderView } from "./views/OrderView/OrderView";
 import { PaymentInfo } from "./views/OrderView/components/PaymentInfo";
+import { Address } from "./views/OrderView/components/Address";
 
 export const App = () => {
   const cart = useAppSelector((state) => state.cart);
@@ -43,6 +44,7 @@ export const App = () => {
           >
             <Route path="userinfo" element={<CustomerInfo />} />
             <Route path="paymentinfo" element={<PaymentInfo />} />
+            <Route path="address" element={<Address />} />
           </Route>
         </Routes>
       </Container>

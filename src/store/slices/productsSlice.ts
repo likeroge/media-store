@@ -6,7 +6,7 @@ const initialState: IProduct[] = [
     id: 1,
     price: 1000,
     inStock: true,
-    title: "IPhone73213213123123",
+    title: "IPhone733",
     category: "electronics",
   },
   {
