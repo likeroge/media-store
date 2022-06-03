@@ -65,7 +65,7 @@ export const OrderModal: FC<{
 
         <ModalFooter>
           <Center width={"full"}>
-            <Button colorScheme="green" mr={3} onClick={onButtonClickHandler}>
+            <Button colorScheme="green" onClick={onButtonClickHandler}>
               Завершить
             </Button>
           </Center>

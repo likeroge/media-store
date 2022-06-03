@@ -1,16 +1,8 @@
-import {
-  Box,
-  Center,
-  HStack,
-  Icon,
-  Link,
-  Tag,
-  TagLabel,
-} from "@chakra-ui/react";
+import { Box, Center, HStack, Icon, Tag, TagLabel } from "@chakra-ui/react";
 import React from "react";
 import { BsCart, BsCartFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link as ReactRouterLink, useNavigate } from "react-router-dom";
+import { Link, Link as ReactRouterLink, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/redux.hooks";
 
 export const Footer = () => {
@@ -27,11 +19,13 @@ export const Footer = () => {
       display={{ base: "flex", lg: "none" }}
       px={4}
     >
-      <Box onClick={() => navigate("")} _active={{ transform: "scale(0.9)" }}>
-        <Icon as={GiHamburgerMenu} w={7} h={7} />
-      </Box>
-      <Box>
-        <Link as={ReactRouterLink} to="cart">
+      <Link to="">
+        <Box _active={{ transform: "scale(0.9)" }}>
+          <Icon color={"gray.400"} as={GiHamburgerMenu} w={7} h={7} />
+        </Box>
+      </Link>
+      <Link to="cart">
+        <Box>
           {cart.products.length === 0 ? (
             <Icon
               color={"gray.400"}
@@ -47,6 +41,7 @@ export const Footer = () => {
                 borderRadius="full"
                 variant="subtle"
                 colorScheme="gray"
+                _active={{ transform: "scale(0.9)" }}
               >
                 <TagLabel fontWeight={"bold"}>{cart.products.length}</TagLabel>
               </Tag>
@@ -59,8 +54,8 @@ export const Footer = () => {
               />
             </>
           )}
-        </Link>
-      </Box>
+        </Box>
+      </Link>
     </HStack>
   );
 };
